@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background: #303240;
+
+  &__components {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  &__component {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+}
+
+.component {
+  &__text {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: white;
+  }
+
+  &__icon {
+    color: white;
+  }
+}
