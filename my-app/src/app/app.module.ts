@@ -7,6 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LogoComponent } from './logo/logo.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseItemComponent } from './course-item/course-item.component';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { CourseItemComponent } from './course-item/course-item.component';
     FooterComponent,
     LogoComponent,
     CoursesComponent,
-    CourseItemComponent
+    CourseItemComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
