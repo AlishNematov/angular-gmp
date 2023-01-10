@@ -9,6 +9,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LogoComponent,
     CoursesComponent,
     CourseItemComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
