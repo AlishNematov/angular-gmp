@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   background: #303240;
-  // margin-top: auto;
+  position: sticky;
+  top: 100%;
 }
 
 .wrapper {
