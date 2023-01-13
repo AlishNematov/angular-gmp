@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card__content content">
       <div class="content__header">
-        <div class="content__title">Video Course 1. Name tag</div>
+        <div class="content__title">{{ course.title}}</div>
         <div class="content__datetime datetime">
           <div class="datetime__item">
             <mat-icon class="datetime__icon">calendar_month</mat-icon>
@@ -10,11 +10,11 @@
           </div>
           <div class="datetime__item">
             <mat-icon class="datetime__icon">schedule</mat-icon>
-            <span class="datetime__text">9 Nov, 2018</span>
+            <span class="datetime__text">{{ course.creationDate | date:'d MMM, y'}}</span>
           </div>
         </div>
       </div>
-      <div class="content__text">Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during</div>
+      <div class="content__text">{{ course.description }}</div>
     </div>
     <div class="card__buttons buttons">
       <button type="button" class="buttons__button">
