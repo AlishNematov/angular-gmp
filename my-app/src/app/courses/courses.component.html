@@ -1,1 +1,24 @@
-<p>courses works!</p>
+<div class="courses">
+  <app-breadcrumbs></app-breadcrumbs>
+  <div class="wrapper">
+    <div class="search">
+      <input type="text" class="search__input" placeholder="Type to search">
+      <button type="button" class="search__button">Search</button>
+    </div>
+    <div class="add">
+      <button class="add__button">
+        <mat-icon matPrefix>add</mat-icon>
+        Add course
+      </button>
+    </div>
+    <div class="courses__container">
+      <app-course-item></app-course-item>
+      <app-course-item></app-course-item>
+      <app-course-item></app-course-item>
+      <div class="courses__more-button">
+        <a href="">LOAD MORE</a>
+      </div>
+    </div>
+  </div>
+
+</div>

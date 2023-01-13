@@ -1,0 +1,68 @@
+.courses {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  background-color:lightgray;
+
+  .wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__more-button {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+    background-color: white;
+    border-radius: 1px;
+  }
+}
+
+.search {
+  display: flex;
+  gap: 1rem;
+
+  &__input {
+    height: 3.6rem;
+    width: 24rem;
+    padding: 0 1.2rem;
+    border: 1px solid #ced0db;
+    border-radius: 3px;
+  }
+
+  &__button {
+    height: 100%;
+    color: white;
+    padding: 0 1.6rem;
+    background: rgb(110, 206, 13);
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+}
+
+.add {
+  display: flex;
+  height: 3.6rem;
+  justify-content: end;
+
+  &__button {
+    background-color: turquoise;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    color: white;
+    padding: 0 1.8rem;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+}
