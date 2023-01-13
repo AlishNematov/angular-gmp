@@ -15,4 +15,8 @@ export class CourseItemComponent {
     const minutes = Math.floor(minutesValue % minutesInHour);
     return `${hours}h ${minutes} min`
   }
+
+  public onEditButtonClick(): void {return}
+
+  public onDeleteButtonClick(): void {return}
 }
