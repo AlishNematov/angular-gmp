@@ -2,8 +2,8 @@
   <app-breadcrumbs></app-breadcrumbs>
   <div class="wrapper">
     <div class="search">
-      <input type="text" class="search__input" placeholder="Type to search">
-      <button type="button" class="search__button">Search</button>
+      <input type="text" class="search__input" placeholder="Type to search" [(ngModel)]="searchValue">
+      <button type="button" class="search__button" (click)="onSearchButtonClick(searchValue)">Search</button>
     </div>
     <div class="add">
       <button class="add__button">

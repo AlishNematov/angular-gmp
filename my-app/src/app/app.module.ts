@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -26,7 +27,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     MatIconModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
