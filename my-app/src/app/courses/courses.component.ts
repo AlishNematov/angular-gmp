@@ -4,7 +4,7 @@ import { Course } from 'src/models/course.model';
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.scss']
+  styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent {
   public courses: Course[] = [
@@ -28,12 +28,13 @@ export class CoursesComponent {
       creationDate: new Date(),
       duration: 29,
       description: "3Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
-    }
-  ]
+    },
+  ];
+
   public searchValue = '';
 
   public onSearchButtonClick(searchValue: string): void {
-    console.log(searchValue)
+    console.log(searchValue);
   }
 
   public onLoadMoreBtnClick(event: Event): void {

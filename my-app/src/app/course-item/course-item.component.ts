@@ -4,7 +4,7 @@ import { Course } from 'src/models/course.model';
 @Component({
   selector: 'app-course-item',
   templateUrl: './course-item.component.html',
-  styleUrls: ['./course-item.component.scss']
+  styleUrls: ['./course-item.component.scss'],
 })
 export class CourseItemComponent {
   @Input() public course!: Course;
@@ -13,10 +13,10 @@ export class CourseItemComponent {
     const minutesInHour = 60;
     const hours = Math.floor(minutesValue / minutesInHour);
     const minutes = Math.floor(minutesValue % minutesInHour);
-    return `${hours}h ${minutes} min`
+    return `${hours}h ${minutes} min`;
   }
 
-  public onEditButtonClick(): void {return}
+  public onEditButtonClick(): void {return;}
 
-  public onDeleteButtonClick(): void {return}
+  public onDeleteButtonClick(): void {return;}
 }

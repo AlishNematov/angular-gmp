@@ -28,9 +28,9 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     BrowserAnimationsModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
