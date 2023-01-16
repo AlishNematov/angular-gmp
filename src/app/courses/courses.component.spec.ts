@@ -47,6 +47,12 @@ describe('CoursesComponent', () => {
     expect(consoleSpy).toHaveBeenCalled();
   });
 
+  it('should log message if onDeleteClick method called', () => {
+    const consoleSpy = spyOn(console, 'log');
+    component.onDeleteClick(1);
+    expect(consoleSpy).toHaveBeenCalledWith(1);
+  });
+
   it('should prevent default actions if onLoadMoreBtnClick method called', () => {
     const clickEvent = new Event('click');
     const preventDefaultSpy = spyOn(clickEvent, 'preventDefault');

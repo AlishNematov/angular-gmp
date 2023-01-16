@@ -47,6 +47,15 @@ describe('CourseItemComponent', () => {
     expect(onDeleteButtonClickSpy).toHaveBeenCalled();
   });
 
+  it('should emit event if delete button clicked', () => {
+    const eventSpy = spyOn(component.deleteClicked, 'emit');
+    const deleteButton = fixture.debugElement.query(By.css('button.buttons__button_delete'));
+    deleteButton.nativeElement.click();
+
+    expect(eventSpy).toHaveBeenCalledWith(1);
+  });
+
+
   it('should return string of duration if method transformMinutes called', () => {
     const inputValue = 99;
     const expectingValue = '1h 39 min';
