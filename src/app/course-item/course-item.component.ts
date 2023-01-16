@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Course } from 'src/models/course.model';
 
 @Component({
@@ -9,6 +9,8 @@ import { Course } from 'src/models/course.model';
 export class CourseItemComponent {
   @Input() public course!: Course;
 
+  @Output() public deleteClicked: EventEmitter<number> = new EventEmitter();
+
   public transformMinutes(minutesValue: number): string {
     const minutesInHour = 60;
     const hours = Math.floor(minutesValue / minutesInHour);
@@ -18,5 +20,7 @@ export class CourseItemComponent {
 
   public onEditButtonClick(): void {return;}
 
-  public onDeleteButtonClick(): void {return;}
+  public onDeleteButtonClick(): void {
+    this.deleteClicked.emit(this.course.id);
+  }
 }

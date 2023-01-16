@@ -12,7 +12,7 @@
       </button>
     </div>
     <div class="courses__container">
-      <app-course-item *ngFor="let item of courses" [course]="item"></app-course-item>
+      <app-course-item *ngFor="let item of courses" [course]="item" (deleteClicked)="onDeleteClick($event)"></app-course-item>
       <div class="courses__more-button">
         <a href="" (click)="onLoadMoreBtnClick($event)">LOAD MORE</a>
       </div>

@@ -41,4 +41,8 @@ export class CoursesComponent {
     event.preventDefault();
     console.log('Load More');
   }
+
+  public onDeleteClick(id: number) {
+    console.log(id);
+  }
 }
