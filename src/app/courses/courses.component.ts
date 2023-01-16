@@ -37,6 +37,10 @@ export class CoursesComponent {
     console.log(searchValue);
   }
 
+  public trackByFn(_: number, item: Course) {
+    return item.id;
+  }
+
   public onLoadMoreBtnClick(event: Event): void {
     event.preventDefault();
     console.log('Load More');
