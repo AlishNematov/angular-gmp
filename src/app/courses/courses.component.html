@@ -13,9 +13,9 @@
     </div>
     <div class="courses__container">
       <app-course-item *ngFor="let item of courses; trackBy:trackByFn" [course]="item" (deleteClicked)="onDeleteClick($event)"></app-course-item>
-      <div class="courses__more-button">
-        <a href="" (click)="onLoadMoreBtnClick($event)">LOAD MORE</a>
-      </div>
+      <button class="courses__more-button" (click)="onLoadMoreBtnClick($event)">
+        <span class="courses__more-button_text">LOAD MORE</span>
+      </button>
     </div>
   </div>
 
