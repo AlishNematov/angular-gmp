@@ -18,9 +18,9 @@ export class CourseItemComponent {
     return `${hours}h ${minutes} min`;
   }
 
-  public onEditButtonClick(): void {return;}
+  public editCourse(): void {}
 
-  public onDeleteButtonClick(): void {
+  public deleteCourse(): void {
     this.deleteClicked.emit(this.course.id);
   }
 }
