@@ -26,6 +26,25 @@
     background-color: white;
     border-radius: 1px;
   }
+
+  &__add-button {
+    align-self: end;
+    width: 11.1rem;
+    background: #009ECC;
+    line-height: 3.6rem;
+    letter-spacing: -0.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  &__add-icon {
+    transform: scale(0.7);
+  }
 }
 
 .search {
@@ -47,24 +66,6 @@
     background: rgb(110, 206, 13);
     outline: none;
     border: none;
-    border-radius: 1px;
-    cursor: pointer;
-  }
-}
-
-.add {
-  display: flex;
-  height: 3.6rem;
-  justify-content: end;
-
-  &__button {
-    background-color: turquoise;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: none;
-    color: white;
-    padding: 0 1.8rem;
     border-radius: 1px;
     cursor: pointer;
   }
