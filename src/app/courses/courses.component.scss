@@ -33,13 +33,6 @@
     background: #009ECC;
     line-height: 3.6rem;
     letter-spacing: -0.1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
   }
 
   &__add-icon {
@@ -61,12 +54,7 @@
 
   &__button {
     height: 100%;
-    color: white;
     padding: 0 1.6rem;
-    background: rgb(110, 206, 13);
-    outline: none;
-    border: none;
-    border-radius: 1px;
-    cursor: pointer;
+    background: #67A300;
   }
 }

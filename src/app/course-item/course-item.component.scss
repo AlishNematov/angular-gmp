@@ -55,16 +55,10 @@
 
 .buttons {
   &__button {
-    display: flex;
     padding: 0 1.2rem 0 0.4rem;
-    align-items: center;
     background: #009ECC;
-    border: none;
     font-size: 1.2rem;
     letter-spacing: -0.1px;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
   }
 
   &__icon {

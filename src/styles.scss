@@ -47,3 +47,13 @@ html {
 }
 
 html, body { height: 100%; }
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
