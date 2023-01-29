@@ -1,22 +1,13 @@
 <div class="courses">
-  <app-breadcrumbs></app-breadcrumbs>
-  <div class="wrapper">
-    <div class="search">
-      <input type="text" class="search__input" placeholder="Type to search" [(ngModel)]="searchValue">
-      <button type="button" class="search__button" (click)="onSearchButtonClick(searchValue)">Search</button>
-    </div>
-    <div class="add">
-      <button class="add__button">
-        <mat-icon matPrefix>add</mat-icon>
-        Add course
-      </button>
-    </div>
-    <div class="courses__container">
-      <app-course-item *ngFor="let item of courses; trackBy:trackByFn" [course]="item" (deleteClicked)="onDeleteClick($event)"></app-course-item>
-      <button class="courses__more-button" (click)="onLoadMoreBtnClick($event)">
-        <span class="courses__more-button_text">LOAD MORE</span>
-      </button>
+  <app-search></app-search>
+  <button class="courses__add-button">
+    <mat-icon class="courses__add-icon">add_circle_outline</mat-icon>
+    Add course
+  </button>
+  <div class="courses__container">
+    <app-course-item *ngFor="let item of courses; trackBy:trackByFn" [course]="item" (deleteClicked)="deleteCourse($event)"></app-course-item>
+    <div class="courses__more-button">
+      <a href="" (click)="loadMore($event)">LOAD MORE</a>
     </div>
   </div>
-
 </div>

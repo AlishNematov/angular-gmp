@@ -9,8 +9,6 @@ import { Course } from 'src/models/course.model';
 export class CoursesComponent implements OnInit {
   public courses: Course[] = [];
 
-  public searchValue = '';
-
   ngOnInit(): void {
     this.courses = [
       {
@@ -37,20 +35,16 @@ export class CoursesComponent implements OnInit {
     ];
   }
 
-  public onSearchButtonClick(searchValue: string): void {
-    console.log(searchValue);
-  }
-
   public trackByFn(_: number, item: Course) {
     return item.id;
   }
 
-  public onLoadMoreBtnClick(event: Event): void {
+  public loadMore(event: Event): void {
     event.preventDefault();
     console.log('Load More');
   }
 
-  public onDeleteClick(id: number) {
+  public deleteCourse(id: number) {
     console.log(id);
   }
 }
