@@ -1,0 +1,15 @@
+.breadcrumbs {
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0 8.5rem;
+
+  &__text {
+    line-height: 2.4rem;
+    letter-spacing: 0;
+    color: #464A5A;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}

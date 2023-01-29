@@ -1,0 +1,13 @@
+<div class="courses">
+  <app-search></app-search>
+  <button class="courses__add-button">
+    <mat-icon class="courses__add-icon">add_circle_outline</mat-icon>
+    Add course
+  </button>
+  <div class="courses__container">
+    <app-course-item *ngFor="let item of courses; trackBy:trackByFn" [course]="item" (deleteClicked)="deleteCourse($event)"></app-course-item>
+    <div class="courses__more-button">
+      <a href="" (click)="loadMore($event)">LOAD MORE</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title class="card__title">{{ course.title}}</mat-card-title>
+    <div class="card__datetime datetime">
+      <div class="datetime__item">
+        <mat-icon class="datetime__icon">calendar_month</mat-icon>
+        <span class="datetime__text">{{ transformMinutes(course.duration) }}</span>
+      </div>
+      <div class="datetime__item">
+        <mat-icon class="datetime__icon">schedule</mat-icon>
+        <span class="datetime__text">{{ course.creationDate | date:'MM/d/y'}}</span>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content class="card__content">
+    <div class="card__text">{{ course.description }}</div>
+    <div class="card__buttons buttons">
+      <button class="buttons__button buttons__button_edit" type="button" (click)="editCourse()">
+        <mat-icon class="buttons__icon" matPrefix>edit</mat-icon>
+        Edit
+      </button>
+      <button class="buttons__button buttons__button_delete" type="button" (click)="deleteCourse()">
+        <mat-icon class="buttons__icon" matPrefix>delete</mat-icon>
+        Delete
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
