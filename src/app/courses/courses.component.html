@@ -1,8 +1,5 @@
 <div class="courses">
-  <div class="search">
-    <input type="text" class="search__input" placeholder="Type to search" [(ngModel)]="searchValue">
-    <button type="button" class="search__button" (click)="onSearchButtonClick(searchValue)">Search</button>
-  </div>
+  <app-search></app-search>
   <button class="courses__add-button">
     <mat-icon class="courses__add-icon">add_circle_outline</mat-icon>
     Add course

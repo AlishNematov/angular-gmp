@@ -39,22 +39,3 @@
     transform: scale(0.7);
   }
 }
-
-.search {
-  display: flex;
-  gap: 1rem;
-
-  &__input {
-    height: 3.6rem;
-    width: 24rem;
-    padding: 0 1.2rem;
-    border: 1px solid #ced0db;
-    border-radius: 3px;
-  }
-
-  &__button {
-    height: 100%;
-    padding: 0 1.6rem;
-    background: #67A300;
-  }
-}
