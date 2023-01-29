@@ -32,7 +32,7 @@ describe('CourseItemComponent', () => {
   });
 
   it('should call onEditButtonClick if edit button clicked', () => {
-    const onEditButtonClickSpy = spyOn(component, 'onEditButtonClick');
+    const onEditButtonClickSpy = spyOn(component, 'editCourse');
     const editButton = fixture.debugElement.query(By.css('button.buttons__button_edit'));
     editButton.nativeElement.click();
 
@@ -40,7 +40,7 @@ describe('CourseItemComponent', () => {
   });
 
   it('should call onDeleteButtonClick if edit button clicked', () => {
-    const onDeleteButtonClickSpy = spyOn(component, 'onDeleteButtonClick');
+    const onDeleteButtonClickSpy = spyOn(component, 'deleteCourse');
     const deleteButton = fixture.debugElement.query(By.css('button.buttons__button_delete'));
     deleteButton.nativeElement.click();
 
