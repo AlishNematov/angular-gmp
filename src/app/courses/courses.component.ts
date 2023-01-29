@@ -39,12 +39,12 @@ export class CoursesComponent implements OnInit {
     return item.id;
   }
 
-  public onLoadMoreBtnClick(event: Event): void {
+  public loadMore(event: Event): void {
     event.preventDefault();
     console.log('Load More');
   }
 
-  public onDeleteClick(id: number) {
+  public deleteCourse(id: number) {
     console.log(id);
   }
 }
