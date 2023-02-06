@@ -9,6 +9,8 @@ import { Course } from 'src/models/course.model';
 export class CoursesComponent implements OnInit {
   public courses: Course[] = [];
 
+  public searchValue = '';
+
   ngOnInit(): void {
     this.courses = [
       {

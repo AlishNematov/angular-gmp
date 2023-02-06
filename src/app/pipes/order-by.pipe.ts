@@ -10,9 +10,8 @@ export class OrderByPipe implements PipeTransform {
     return courses.sort((a, b) => {
       if (order === 'asc') {
         return +a.creationDate - +b.creationDate;
-      } else {
-        return +b.creationDate - +a.creationDate;
-      }
+      } 
+      return +b.creationDate - +a.creationDate;
     });
   }
 
