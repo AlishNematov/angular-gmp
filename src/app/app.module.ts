@@ -15,6 +15,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SearchComponent } from './search/search.component';
 import { BorderStyleDirective } from './directives/border-style.directive';
 import { DurationPipe } from './pipes/duration.pipe';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DurationPipe } from './pipes/duration.pipe';
     SearchComponent,
     BorderStyleDirective,
     DurationPipe,
+    OrderByPipe,
   ],
   imports: [
     BrowserModule,

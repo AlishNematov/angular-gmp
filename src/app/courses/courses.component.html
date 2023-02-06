@@ -5,7 +5,7 @@
     Add course
   </button>
   <div class="courses__container">
-    <app-course-item *ngFor="let item of courses; trackBy:trackByFn" [course]="item" (deleteClicked)="deleteCourse($event)"></app-course-item>
+    <app-course-item *ngFor="let item of courses | orderBy:'desc'; trackBy:trackByFn" [course]="item" (deleteClicked)="deleteCourse($event)"></app-course-item>
     <div class="courses__bottom-container">
       <a href="" *ngIf="courses.length" (click)="loadMore($event)">LOAD MORE</a>
       <div class="courses__message" *ngIf="!courses.length">{{'No data, feel free to add new course' | uppercase}}</div>
