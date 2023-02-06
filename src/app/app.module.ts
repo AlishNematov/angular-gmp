@@ -14,6 +14,7 @@ import { CourseItemComponent } from './course-item/course-item.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SearchComponent } from './search/search.component';
 import { BorderStyleDirective } from './directives/border-style.directive';
+import { DurationPipe } from './pipes/duration.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BorderStyleDirective } from './directives/border-style.directive';
     BreadcrumbsComponent,
     SearchComponent,
     BorderStyleDirective,
+    DurationPipe,
   ],
   imports: [
     BrowserModule,
