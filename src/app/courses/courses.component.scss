@@ -19,18 +19,13 @@
     overflow-y: auto;
   }
 
-  &__more-button {
+  &__bottom-container {
     display: flex;
     justify-content: center;
     padding: 1.4rem 0;
     background-color: white;
     border-radius: 1px;
     border: none;
-
-    &_text {
-      text-decoration: dashed;
-      color: violet;
-    }
   }
 
   &__add-button {
@@ -43,5 +38,9 @@
 
   &__add-icon {
     transform: scale(0.7);
+  }
+
+  &__message {
+    font-size: 16px;
   }
 }
