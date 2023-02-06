@@ -1,6 +1,10 @@
 <mat-card class="card" [appBorderStyle]="course" >
   <mat-card-header>
-    <mat-card-title class="card__title">{{ course.title}}</mat-card-title>
+    <mat-card-title class="card__title">
+      {{ course.title}}
+      <mat-icon class="card__star-icon" *ngIf="course.topRated">star</mat-icon>
+    </mat-card-title>
+
     <div class="card__datetime datetime">
       <div class="datetime__item">
         <mat-icon class="datetime__icon">calendar_month</mat-icon>

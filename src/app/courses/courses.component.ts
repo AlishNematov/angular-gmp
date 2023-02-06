@@ -17,6 +17,7 @@ export class CoursesComponent implements OnInit {
         creationDate: new Date('12.15.2022'),
         duration: 73,
         description: "1Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+        topRated: true,
       },
       {
         id: 2,
@@ -24,6 +25,7 @@ export class CoursesComponent implements OnInit {
         creationDate: new Date('02.25.2023'),
         duration: 88,
         description: "2Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+        topRated: false,
       },
       {
         id: 3,
@@ -31,6 +33,7 @@ export class CoursesComponent implements OnInit {
         creationDate: new Date('02.01.2023'),
         duration: 29,
         description: "3Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+        topRated: false,
       },
     ];
   }
