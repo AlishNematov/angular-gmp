@@ -13,6 +13,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseItemComponent } from './course-item/course-item.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SearchComponent } from './search/search.component';
+import { BorderStyleDirective } from './directives/border-style.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SearchComponent } from './search/search.component';
     CourseItemComponent,
     BreadcrumbsComponent,
     SearchComponent,
+    BorderStyleDirective,
   ],
   imports: [
     BrowserModule,
