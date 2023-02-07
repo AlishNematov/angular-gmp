@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { DurationPipe } from '../pipes/duration.pipe';
 
 import { CourseItemComponent } from './course-item.component';
 
@@ -10,7 +11,7 @@ describe('CourseItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CourseItemComponent ],
+      declarations: [ CourseItemComponent, DurationPipe ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     })
       .compileComponents();
@@ -23,6 +24,7 @@ describe('CourseItemComponent', () => {
       creationDate: new Date(),
       duration: 97,
       description: 'Test description text',
+      topRated: false,
     };
     fixture.detectChanges();
   });
@@ -53,13 +55,5 @@ describe('CourseItemComponent', () => {
     deleteButton.nativeElement.click();
 
     expect(eventSpy).toHaveBeenCalledWith(1);
-  });
-
-
-  it('should return string of duration if method transformMinutes called', () => {
-    const inputValue = 99;
-    const expectingValue = '1h 39 min';
-    const test = component.transformMinutes(inputValue);
-    expect(test).toEqual(expectingValue);
   });
 });

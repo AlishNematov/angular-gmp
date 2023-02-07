@@ -17,6 +17,7 @@ import { BorderStyleDirective } from './directives/border-style.directive';
 import { DurationPipe } from './pipes/duration.pipe';
 import { OrderByPipe } from './pipes/order-by.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { TestComponent } from './test-component/test-component.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     DurationPipe,
     OrderByPipe,
     FilterPipe,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

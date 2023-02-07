@@ -26,14 +26,8 @@ describe('SearchComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should log message with value if search method called', () => {
-    const consoleSpy = spyOn(console, 'log');
-    component.search('test');
-    expect(consoleSpy).toHaveBeenCalledWith('test');
-  });
-
   it('should call search method if Search button clicked', () => {
-    const onSearchButtonClickSpy = spyOn(component, 'search');
+    const onSearchButtonClickSpy = spyOn(component, 'onSearch');
     const loadMoreButton = fixture.debugElement.query(By.css('button.search__button'));
     loadMoreButton.nativeElement.click();
 

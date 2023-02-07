@@ -1,8 +1,99 @@
+import { Course } from 'src/models/course.model';
 import { OrderByPipe } from './order-by.pipe';
 
 describe('OrderByPipe', () => {
+  const pipe = new OrderByPipe();
+  let courses: Course[];
+  const ascSortedCourses = [
+    {
+      id: 1,
+      title: 'Video Course 1. Name tag',
+      creationDate: new Date('12.15.2022'),
+      duration: 73,
+      description: "1Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+      topRated: true,
+    },
+    {
+      id: 3,
+      title: 'Video Course 3. Name tag',
+      creationDate: new Date('02.01.2023'),
+      duration: 29,
+      description: "3Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+      topRated: false,
+    },
+    {
+      id: 2,
+      title: 'Video Course 2. Name tag',
+      creationDate: new Date('02.25.2023'),
+      duration: 88,
+      description: "2Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+      topRated: false,
+    },
+  ];
+  const descSortedCourses = [
+    {
+      id: 2,
+      title: 'Video Course 2. Name tag',
+      creationDate: new Date('02.25.2023'),
+      duration: 88,
+      description: "2Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+      topRated: false,
+    },
+    {
+      id: 3,
+      title: 'Video Course 3. Name tag',
+      creationDate: new Date('02.01.2023'),
+      duration: 29,
+      description: "3Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+      topRated: false,
+    },
+    {
+      id: 1,
+      title: 'Video Course 1. Name tag',
+      creationDate: new Date('12.15.2022'),
+      duration: 73,
+      description: "1Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+      topRated: true,
+    },
+  ];
+  beforeEach(() => {
+    courses = [
+      {
+        id: 1,
+        title: 'Video Course 1. Name tag',
+        creationDate: new Date('12.15.2022'),
+        duration: 73,
+        description: "1Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+        topRated: true,
+      },
+      {
+        id: 2,
+        title: 'Video Course 2. Name tag',
+        creationDate: new Date('02.25.2023'),
+        duration: 88,
+        description: "2Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+        topRated: false,
+      },
+      {
+        id: 3,
+        title: 'Video Course 3. Name tag',
+        creationDate: new Date('02.01.2023'),
+        duration: 29,
+        description: "3Learn about where you can find course descriptions, what information they include, how they work and details about various components of a course description. Course descriptions report information about a university or college's classes. They're published both in course catalogs that outline degree requirements and in course schedules that contain descriptions for all courses offered during",
+        topRated: false,
+      },
+    ];
+  });
   it('create an instance', () => {
-    const pipe = new OrderByPipe();
     expect(pipe).toBeTruthy();
+  });
+  it('sort array by createdAt date in asc order', () => {
+    expect(pipe.transform(courses, 'asc')).toEqual(ascSortedCourses);
+  });
+  it('sort array by createdAt date in desc order', () => {
+    expect(pipe.transform(courses, 'desc')).toEqual(descSortedCourses);
+  });
+  it('sort array by createdAt date in asc order if parameter not passed', () => {
+    expect(pipe.transform(courses)).toEqual(ascSortedCourses);
   });
 });
